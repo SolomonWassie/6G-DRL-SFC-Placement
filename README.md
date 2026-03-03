@@ -1,6 +1,6 @@
 **SFC-MDRL-6GNet**
 
-SFC-MDRL-6GNet is a Deep reinforcement learning–based framework for context-aware online **S**ervice  **F**unction  **C**hain (SFC) deployment and stateful Virtual Network Function (VNF) migration across the Cloud Continuum in 6G network architectures.
+**SFC-MDRL-6GNet** is a Deep reinforcement learning framework for Deep reinforcement learning  for context-aware online **S**ervice **F**unction **C**hain (SFC) **D**eployment and  **M**igration in **6Gnet**work architectures.
 
 The framework enables intelligent, network-state–adaptive VNF placement and migration across Extreme Edge, Edge, and Central Cloud environments within the Cloud Continuum Framework (CCF).
 
