@@ -36,8 +36,6 @@ Stateful VNFs requiring context-aware migration across distributed nodes
 -Policy Network → selects optimal physical nodes for VNF placement
   - Value Network → estimates long-term expected return
   - Advantage-based policy updates for stable and reliable convergence
-
-- RL Agent Capabilities:
   - Observes current VNF placements
   - Monitors link latency and congestion
   - Tracks CPU, bandwidth, and memory usage
@@ -47,8 +45,6 @@ Stateful VNFs requiring context-aware migration across distributed nodes
 **Context-Aware Stateful Migration**
 
 - Each VNF is modeled as stateful, requiring migration of context information when relocated.
-
-- Migration cost considers:
   - Context size
   - Path bandwidth
   - Link congestion
