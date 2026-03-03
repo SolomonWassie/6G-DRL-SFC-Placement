@@ -14,10 +14,9 @@ Unlike traditional heuristic or greedy methods, SFC-MDRL-6GNet continuously moni
 - Migration overhead (context transfer cost, bandwidth usage, energy consumption, SLA penalties)
 - Multi-objective optimization formulation modeling the latency–migration trade-off
 
-**Core System Model**
+** System Model**
 
 SFC-MDRL-6GNet operates within a 6G architecture composed of:
-
 Integrates Extreme-edge, Far-edge, Near-edge, and Cloud nodes into a unified infrastructure.
 Hosts the Service Orchestrator responsible for VNF lifecycle management.
 Supports training, deployment, and continuous refinement of DRL models.
@@ -27,18 +26,16 @@ Supports training, deployment, and continuous refinement of DRL models.
 Stateful VNFs requiring context-aware migration across distributed nodes
 
 **Learning Architecture**
-
 -Proximal Policy Optimization (PPO)
-
 -The learning framework includes:
 -Policy Network → selects optimal physical nodes for VNF placement
-  - Value Network → estimates long-term expected return
-  - Advantage-based policy updates for stable and reliable convergence
-  - Observes current VNF placements
-  - Monitors link latency and congestion
-  - Tracks CPU, bandwidth, and memory usage
-  - Evaluates SLA constraints
-  - Predicts optimal reconfiguration and migration actions
+-Value Network → estimates long-term expected return
+-Advantage-based policy updates for stable and reliable convergence
+-Observes current VNF placements
+-Monitors link latency and congestion
+-Tracks CPU, bandwidth, and memory usage
+-Evaluates SLA constraints
+-Predicts optimal reconfiguration and migration actions
 
 **Context-Aware Stateful Migration**
   - Context size
