@@ -43,8 +43,6 @@ Stateful VNFs requiring context-aware migration across distributed nodes
   - Predicts optimal reconfiguration and migration actions
 
 **Context-Aware Stateful Migration**
-
-- Each VNF is modeled as stateful, requiring migration of context information when relocated.
   - Context size
   - Path bandwidth
   - Link congestion
@@ -61,8 +59,8 @@ Stateful VNFs requiring context-aware migration across distributed nodes
 
 📊 **Performance Gains**
 
-- Compared to greedy baseline approaches, the framework achieves:
-  - 28.8% reduction in end-to-end delay
-  - 34% reduction in migration overhead
+- Compared to greedy baseline approaches, the framework achieves
+-  28.8% reduction in end-to-end delay
+-   34% reduction in migration overhead
 
 
