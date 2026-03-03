@@ -31,10 +31,10 @@ Stateful VNFs requiring context-aware migration across distributed nodes
 
 **Learning Architecture**
 
-- Proximal Policy Optimization (PPO)
+-Proximal Policy Optimization (PPO)
 
-- The learning framework includes:
-  - Policy Network → selects optimal physical nodes for VNF placement
+-The learning framework includes:
+-Policy Network → selects optimal physical nodes for VNF placement
   - Value Network → estimates long-term expected return
   - Advantage-based policy updates for stable and reliable convergence
 
