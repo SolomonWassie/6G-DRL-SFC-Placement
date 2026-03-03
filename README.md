@@ -1,4 +1,5 @@
-**SFC-MDRL-6GNet**
+**SFC-MDRL-6GNet: Deep Reinforcement Learning for Context-Aware Online Service
+Function Chain Deployment and Migration over 6G Networks**
 
 **SFC-MDRL-6GNet** is a  Deep reinforcement learning  for context-aware online **S**ervice **F**unction **C**hain (SFC) **D**eployment and  **M**igration in **6Gnet**work architectures.
 The framework enables intelligent, network-state–adaptive VNF placement and migration across Extreme Edge, Edge, and Central Cloud environments within the Cloud Continuum Framework (CCF).
@@ -14,18 +15,7 @@ Unlike traditional heuristic or greedy methods, SFC-MDRL-6GNet continuously moni
 - Migration overhead (context transfer cost, bandwidth usage, energy consumption, SLA penalties)
 - Multi-objective optimization formulation modeling the latency–migration trade-off
 
-** System Model**
-
-SFC-MDRL-6GNet operates within a 6G architecture composed of:
-Integrates Extreme-edge, Far-edge, Near-edge, and Cloud nodes into a unified infrastructure.
-Hosts the Service Orchestrator responsible for VNF lifecycle management.
-Supports training, deployment, and continuous refinement of DRL models.
-
-
-
-Stateful VNFs requiring context-aware migration across distributed nodes
-
-**Learning Architecture**
+** System Model and Learning Architecture**
 -Proximal Policy Optimization (PPO)
 -The learning framework includes:
 -Policy Network → selects optimal physical nodes for VNF placement
