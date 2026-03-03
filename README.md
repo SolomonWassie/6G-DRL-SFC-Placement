@@ -20,7 +20,7 @@ Unlike traditional heuristic or greedy methods, SFC-MDRL-6GNet continuously moni
 - Multi-objective optimization formulation modeling the latency–migration trade-off
   
  **System Model and Learning Architecture**
-  - Proximal Policy Optimization (PPO)
+  - Online DRL Model (Proximal Policy Optimization)
   - Policy Network → selects optimal physical nodes for VNF placement
   - Value Network → estimates long-term expected return
   - Advantage-based policy updates for stable and reliable convergence
@@ -37,7 +37,6 @@ Unlike traditional heuristic or greedy methods, SFC-MDRL-6GNet continuously moni
   - SLA violation impact
   - Deployment cost
   - Total migration time
-
 **Dynamic & Scalable Environment**
 - Time-varying traffic modeled using a Poisson arrival process
 - Heterogeneous computational resources across infrastructure nodes
