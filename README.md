@@ -107,7 +107,7 @@ The simulation environment models realistic network behavior including:
 ## Repository Structure
 
 ```
-DRL_SFC_PLACEMNT/
+6G-DRL-SFC-Placement/
 │
 │
 ├── envs/
