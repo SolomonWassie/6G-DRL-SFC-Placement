@@ -1,53 +1,126 @@
-**SFC-MDRL-6GNet: Deep Reinforcement Learning for Context-Aware Online Service
-Function Chain Deployment and Migration over 6G Networks**
+# 6G-DRL-SFC-Placement
+## Deep Reinforcement Learning for Context-Aware Online Service Function Chain Deployment and Migration over 6G Networks
 
-**6G-DRL-SFCPlacement** is a  Deep reinforcement learning  for context-aware online **S**ervice **F**unction **C**hain (SFC) **D**eployment and  **M**igration in **6Gnet**work architectures.
-The framework enables intelligent, network-state–adaptive VNF placement and migration across Extreme Edge, Edge, and Central Cloud environments within the Cloud Continuum Framework (CCF).
-Unlike traditional heuristic or greedy methods, SFC-MDRL-6GNet continuously monitors time-varying user traffic, infrastructure resource availability, and link conditions to dynamically optimize VNF deployment decisions. The framework enables network-state–adaptive VNF placement across Extreme Edge, Edge, and Central Cloud environments within the Cloud Continuum Framework (CCF), without relying on static heuristics or greedy strategies. By continuously monitoring time-varying traffic demands, infrastructure resource availability, and link conditions, SFC-MDRL-6GNet dynamically optimizes deployment decisions while explicitly modeling the trade-off between processing and communication latency and migration overhead, including context transfer cost, bandwidth usage, energy consumption, and SLA penalties, through a multi-objective optimization formulation.
+**6G-DRL-SFC-Placement** is a research framework for **context-aware Service Function Chain (SFC) deployment and stateful VNF migration** in **6G network architectures** using **Deep Reinforcement Learning (DRL)**.
 
-**Optimization Objectives**
-- End-to-End (E2E) SFC delay
-- Stateful VNF migration cost
-- SLA violation reduction
-- VNF request acceptance ratio
-- Resource utilization efficiency 
-- Stateful VNF migration cost
-- SLA violation reduction
-- VNF request acceptance ratio
-- Resource utilization efficiency
-- Processing and communication latency
-- Migration overhead (context transfer cost, bandwidth usage, energy consumption, SLA penalties)
-- Multi-objective optimization formulation modeling the latency–migration trade-off
-  
- **System Model and Learning Architecture**
-  - Online DRL Model (Proximal Policy Optimization)
-  - Policy Network → selects optimal physical nodes for VNF placement
-  - Value Network → estimates long-term expected return
-  - Advantage-based policy updates for stable and reliable convergence
-  - Observes current VNF placements
-  -  Monitors link latency and congestion
-  - Tracks CPU, bandwidth, and memory usage
-  - evaluates SLA constraints
-  -  Predicts optimal reconfiguration and migration actions
+The framework enables intelligent **network-state–adaptive orchestration** of Virtual Network Functions (VNFs) across the **Cloud Continuum Framework (CCF)**, which integrates distributed compute resources from:
 
-**Context-Aware Stateful Migration**
-  - Context size
-  - Path bandwidth
-  - Link congestion
-  - SLA violation impact
-  - Deployment cost
-  - Total migration time
-**Dynamic & Scalable Environment**
-- Time-varying traffic modeled using a Poisson arrival process
-- Heterogeneous computational resources across infrastructure nodes
+- Extreme Edge  
+- Edge / MEC nodes  
+- Central Cloud data centers  
+
+Unlike traditional heuristic or greedy placement approaches, the framework continuously observes **time-varying network conditions** and dynamically learns optimal deployment policies that minimize service delay while accounting for migration overhead.
+
+Learning is performed using **Proximal Policy Optimization (PPO)** with policy and value networks interacting with a simulated network environment.
+
+---
+
+# Core Features
+
+- Deep Reinforcement Learning for **SFC deployment and VNF migration**
+- Context-aware **network-state adaptive orchestration**
+- Multi-objective optimization considering:
+  - End-to-End latency
+  - Migration overhead
+  - SLA constraints
+- **Stateful VNF migration modeling**
+- Dynamic traffic generation
+- Heterogeneous compute and communication resources
+- Scalable network environments (10–60 nodes)
+- Service chains up to **13 VNFs**
+
+Implemented using:
+
+- Python  
+- OpenAI Gymnasium  
+- Stable-Baselines3  
+- NetworkX  
+
+---
+
+# System Overview
+
+The framework models a **6G network architecture** consisting of three key components.
+
+## Cloud Continuum Framework (CCF)
+
+The **Cloud Continuum Framework (CCF)** provides a unified resource pool that orchestrates distributed computing and networking resources across the continuum from **Extreme Edge to Central Cloud**.
+
+Nodes within the CCF include:
+
+- Extreme-edge devices (e.g., smartphones, IoT devices, AR/VR devices)
+- Edge / MEC servers located near base stations
+- Central cloud data centers with large-scale computational capacity
+
+Each node provides heterogeneous computational and communication resources that must be efficiently allocated to support service requests.
+
+---
+
+## Service Function Chains (SFCs)
+
+Network services are modeled as **Service Function Chains**, consisting of ordered Virtual Network Functions such as:
+
+- Network Address Translation (NAT)
+- Firewall (FW)
+- Traffic Monitor (TM)
+- Video Optimization Controller (VOC)
+- Intrusion Detection / Prevention Systems (IDPS)
+
+Each SFC request specifies:
+
+- Minimum bandwidth requirement  
+- Maximum end-to-end delay  
+- Computational resource demand  
+
+The objective is to determine optimal deployment locations for VNFs across the **Cloud Continuum Framework (CCF)**.
+
+---
+
+## DRL-Based Service Orchestrator
+
+A reinforcement learning agent operates as a **network-aware service orchestrator** that observes the current system state and decides **where VNFs should be deployed or migrated** across the Cloud Continuum Framework.
+
+The DRL agent continuously adapts to changing network conditions to minimize service latency while accounting for migration costs.
+
+---
+
+# Learning Architecture
+
+The deployment problem is formulated as a **Markov Decision Process (MDP)**.
+
+The PPO agent learns an optimal policy using:
+
+### Policy Network
+Selects the optimal physical nodes for VNF placement.
+
+### Value Network
+Estimates the expected long-term return of network states.
+
+### Advantage-Based Policy Updates
+Stabilize learning and ensure reliable policy convergence.
+
+The agent observes the following system information:
+
+- Current VNF deployment locations
+- Link latency and congestion
+- CPU, bandwidth, and memory utilization
+- SLA constraints
+- Traffic demand patterns
+
+Based on these observations, the agent predicts optimal **deployment and migration actions**.
+
+---
+
+# Dynamic & Scalable Environment
+
+The simulation environment models realistic network behavior including:
+
+- Time-varying traffic modeled using a **Poisson arrival process**
+- Heterogeneous computational resources across nodes
 - Variable link capacities reflecting dynamic network conditions
-- Large-scale network topologies ranging from 10 to 60 nodes
-- Service Function Chains (SFCs) with lengths up to 13 VNFs
+- Network topologies ranging from **10 to 60 nodes**
+- Service Function Chains with up to **13 VNFs**
 
-📊 **Performance Gains**
+---
 
-- Compared to greedy baseline approaches, the framework achieves
--  28.8% reduction in end-to-end delay
--   34% reduction in migration overhead
-
-
+# Repository Structure
