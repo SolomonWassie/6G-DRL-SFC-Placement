@@ -147,3 +147,13 @@ If you use this framework in your research, please cite:
 ACM/SIGAPP Symposium on Applied Computing (SAC), 2025.
 URL: https://dl.acm.org/doi/abs/10.1145/3672608.3707975
 
+```
+@inproceedings{wassie2025deep,
+  title={Deep reinforcement learning for context-aware online service function chain deployment and migration over 6g networks},
+  author={Wassie, Solomon Fikadie and Di Maio, Antonio and Braun, Torsten},
+  booktitle={Proceedings of the 40th ACM/SIGAPP Symposium on Applied Computing},
+  pages={1361--1370},
+  year={2025}
+}
+```
+
