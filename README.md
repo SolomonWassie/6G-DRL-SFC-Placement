@@ -118,14 +118,18 @@ DRL_SFC_PLACEMNT/
 │   ├── callback.py
 │   └── PPO_agent.py
 │
-├── Greedy_Baseline.py
-├── migrationcost.py
-├── number_of_migration.py
-├── scalability.py
+├── metrics/
+│   ├── migrationcost.py
+│   ├── number_of_migration.py
+│   └── scalability.py
 │
-├── training_A2C.py
-├── training_ppo.py
-├── training_trpo
+├── training/
+│   ├── training_A2C.py
+│   ├── training_ppo.py
+│   └── training_trpo.py
+│
+├── Baseline.py
+├── requirements.txt
 │
 ├── results/
 │
@@ -141,7 +145,7 @@ pip install -r requirements.txt
 
 Run training:
 ```bash
-python training_ppo.py  # PPO agent training
+python main.py
 ```
 **Citation**
 If you use this framework in your research, please cite:
