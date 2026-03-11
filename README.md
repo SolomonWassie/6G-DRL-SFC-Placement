@@ -107,10 +107,10 @@ The simulation environment models realistic network behavior including:
 
 # Repository Structure
 ```
-DRL_SFC_PLACEMNT/
+6G-DRL-SFC-Placement/
 │
 ├── envs/
-│   ├── enviroment.py
+│   ├── enviroment.py 
 │   └── network_topology.py
 │
 ├── agents/
@@ -120,7 +120,7 @@ DRL_SFC_PLACEMNT/
 │   └── callback.py
 │
 ├── metrics/
-│   ├── migrationcost.py
+│   ├── migrationcost.py 
 │   ├── number_of_migration.py
 │   └── scalability.py
 │
@@ -128,11 +128,6 @@ DRL_SFC_PLACEMNT/
 │   ├── training_A2C.py
 │   ├── training_ppo.py
 │   └── training_trpo.py
-│
-├── results/
-│   ├── PPO_vnf_migration_training_rewards_lr_0.0001.csv
-│   ├── PPO_vnf_migration_training_rewards_lr_0.0005.csv
-│   └── PPO_vnf_migration_training_rewards_lr_0.003.csv
 │
 ├── Baseline.py
 ├── requirements.txt
@@ -148,7 +143,7 @@ pip install -r requirements.txt
 
 Run training:
 ```bash
-python main.py
+python training/training_ppo.py # PPO agent training
 ```
 **Citation**
 If you use this framework in your research, please cite:
@@ -157,7 +152,7 @@ If you use this framework in your research, please cite:
 ACM/SIGAPP Symposium on Applied Computing (SAC), 2025.
 URL: https://dl.acm.org/doi/abs/10.1145/3672608.3707975
 
-
+```
 @inproceedings{wassie2025deep,
   title={Deep reinforcement learning for context-aware online service function chain deployment and migration over 6g networks},
   author={Wassie, Solomon Fikadie and Di Maio, Antonio and Braun, Torsten},
@@ -165,3 +160,4 @@ URL: https://dl.acm.org/doi/abs/10.1145/3672608.3707975
   pages={1361--1370},
   year={2025}
 }
+```
