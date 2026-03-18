@@ -110,26 +110,26 @@ The simulation environment models realistic network behavior including:
 6G-DRL-SFC-Placement/
 │
 ├── envs/
-│   ├── enviroment.py 
-│   └── network_topology.py
+│   ├── enviroment.py → Defines the reinforcement learning environment
+│   └── network_topology.py → Models the network topology and resource capacities
 │
-├── agents/
-│   ├── A2C_agent.py
-│   ├── PPO_agent.py
-│   ├── trpo_agent.py
-│   └── callback.py
+├── Agents/
+│   ├── A2C_agent.py → A2C agent
+│   ├── PPO_agent.py → PPO agent
+│   ├── trpo_agent.py → TRPO agent
+│   └── callback.py → Custom callbacks for logging and monitoring training progress
 │
-├── metrics/
-│   ├── migrationcost.py 
-│   ├── number_of_migration.py
-│   └── scalability.py
+├── metrics/ → (used only for evaluation, not during RL training)
+│   ├── migrationcost.py → Computes the cost associated with VNF migration
+│   ├── number_of_migration.py  → Tracks the number of migrations
+│   └── scalability.py → Evaluates scalability under varying network sizes 
 │
 ├── training/
 │   ├── training_A2C.py
 │   ├── training_ppo.py
 │   └── training_trpo.py
 │
-├── Baseline.py
+├── Baseline.py → Baseline heuristic placement method used for comparison with DRL approaches
 ├── requirements.txt
 └── README.md
 ```
